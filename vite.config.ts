@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Flow_Finance/', // Use your repo name
+  base: 'https://a-dezeray.github.io/Flow_Finance/', // Use your repo name
 })
