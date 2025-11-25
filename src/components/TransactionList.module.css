@@ -1,0 +1,133 @@
+.container {
+  margin-bottom: var(--spacing-lg);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.item:hover {
+  background: var(--color-border);
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  background: var(--color-success);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.details {
+  flex: 1;
+  min-width: 0;
+}
+
+.description {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.recurringBadge {
+  background: var(--color-primary-light);
+  color: var(--color-text-secondary);
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-left: var(--spacing-xs);
+}
+
+.amount {
+  text-align: right;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.value.income {
+  color: var(--color-success);
+}
+
+.value.expense {
+  color: var(--color-danger);
+}
+
+.deleteBtn {
+  opacity: 0;
+  color: var(--color-text-muted);
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.deleteBtn:hover {
+  color: var(--color-danger);
+}
+
+.item:hover .deleteBtn {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .deleteBtn {
+    opacity: 1;
+  }
+
+  .item {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .details {
+    width: calc(100% - 52px);
+  }
+
+  .amount {
+    width: 100%;
+    text-align: left;
+    padding-left: 52px;
+    margin-top: var(--spacing-xs);
+  }
+
+  .deleteBtn {
+    position: absolute;
+    right: var(--spacing-md);
+    top: var(--spacing-md);
+  }
+}
