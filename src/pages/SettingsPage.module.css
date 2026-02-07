@@ -1,0 +1,95 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.container h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.section {
+  padding: var(--spacing-xl);
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.setting:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.setting:first-of-type {
+  padding-top: 0;
+}
+
+.settingLabel {
+  display: block;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.settingDescription {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.themeBtn {
+  min-width: 120px;
+}
+
+.importGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.successMsg {
+  font-size: 0.8125rem;
+  color: var(--color-success);
+}
+
+.errorMsg {
+  font-size: 0.8125rem;
+  color: var(--color-danger);
+}
+
+.dangerZone {
+  border: 1px solid var(--color-danger-bg);
+}
+
+.confirmGroup {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .setting {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+}
